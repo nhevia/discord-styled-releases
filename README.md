@@ -1,7 +1,10 @@
 # discord-styled-releases
 *Action that uses a webhook for sending automatic styled Discord messages on new repository releases.*
 
-####Example usage
+
+![alt](https://i.imgur.com/jwo6XsD.png)
+
+### Example usage
 
 Create file `discord-release-msg.yml` under folder `.github/workflows` in your project's root folder:
 >.github/workflows/discord-release-msg.yml
@@ -27,7 +30,7 @@ jobs:
           webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
 ```
 
-####Create a webhook
+### Create a webhook
 
 To create a new webhook in discord go to **Channel > Edit > Integrations > Webhooks > New Webhook**
 
@@ -36,7 +39,7 @@ Once you have the webhoook URL, you can get the `ID` and the `TOKEN`. They are i
 > https://discord.com/api/webhooks/ID/TOKEN
 
 
-####Adding neccesary secrets
+### Adding necessary secrets
 
 This is needed to not expose your `ID/TOKEN` (which would mean anybody can use your webhook)
 
