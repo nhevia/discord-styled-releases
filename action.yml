@@ -1,0 +1,15 @@
+name: Discord Style realeses with webhooks
+description: Sends automatic releases to Discord, using a webhook.
+inputs:
+  webhook_id:
+    description: Discord's webhook id. Use GH repo secrets.
+    required: true
+  webhook_token:
+    description: Discord's webhook token. Use GH repo secrets.
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  color: orange
+  icon: align-justify
