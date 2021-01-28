@@ -1,0 +1,39 @@
+{
+  "name": "discord-styled-releases",
+  "author": "Nicolas Hevia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "discord",
+    "webhooks",
+    "style",
+    "release"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thesourcefun/discord-styled-webhooks.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thesourcefun/discord-styled-webhooks/issues"
+  },
+  "homepage": "https://github.com/thesourcefun/discord-styled-webhooks#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
+  }
+}
