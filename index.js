@@ -7,7 +7,9 @@ async function getContext () {
   const payload = context.payload
 
   const content = {
-    body: payload.release.body,
+    body: payload.release.body.length < 1500
+      ? payload.release.body
+      : payload.release.body.substring(0, 1500) + ` ([...](${payload.release.html_url}))`,
     version: payload.release.tag_name,
     html_url: payload.release.html_url
   }
