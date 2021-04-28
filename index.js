@@ -35,7 +35,7 @@ async function run () {
 
     const body = { embeds: [embedMsg] }
 
-    const url = `https://discord.com/api/webhooks/${core.getInput('webhook_id')}/${core.getInput('webhook_token')}`
+    const url = `https://discord.com/api/webhooks/${core.getInput('webhook_id')}/${core.getInput('webhook_token')}?wait=true`
 
     fetch(url, {
       method: 'post',
