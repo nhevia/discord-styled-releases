@@ -42,15 +42,8 @@ async function run () {
       body: JSON.stringify(body),
       headers: { 'Content-Type': 'application/json' }
     })
-    const response = await responseRaw.json()
-    core.info(response)
-
-    core.info(
-      // `
-      // Version: ${content.version},
-      // Body: ${content.body}
-      // `
-    )
+    // const response = await responseRaw.json()
+    core.info(responseRaw)
   } catch (error) {
     core.setFailed(error.message)
   }
