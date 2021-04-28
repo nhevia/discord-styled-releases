@@ -37,13 +37,14 @@ async function run () {
 
     const url = `https://discord.com/api/webhooks/${core.getInput('webhook_id')}/${core.getInput('webhook_token')}`
 
-    const responseRaw = await fetch(url, {
+    fetch(url, {
       method: 'post',
       body: JSON.stringify(body),
       headers: { 'Content-Type': 'application/json' }
     })
-    // const response = await responseRaw.json()
-    core.info(responseRaw)
+      .then(res => res.json())
+      .then(data => core.info(data))
+      .catch(err => core.info(err))
   } catch (error) {
     core.setFailed(error.message)
   }
