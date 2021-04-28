@@ -9,7 +9,7 @@ inputs:
     required: true
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: './dist/index.js'
 branding:
   color: orange
   icon: align-justify
