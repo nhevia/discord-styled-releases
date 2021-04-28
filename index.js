@@ -12,10 +12,6 @@ async function getContext () {
     html_url: payload.release.html_url
   }
 
-  core.info(`
-  Version: ${content.version},
-  Body: ${content.body}`)
-
   return content
 }
 
@@ -41,11 +37,20 @@ async function run () {
 
     const url = `https://discord.com/api/webhooks/${core.getInput('webhook_id')}/${core.getInput('webhook_token')}`
 
-    await fetch(url, {
+    const responseRaw = await fetch(url, {
       method: 'post',
       body: JSON.stringify(body),
       headers: { 'Content-Type': 'application/json' }
     })
+    const response = await responseRaw.json()
+    core.info(response)
+
+    core.info(
+      // `
+      // Version: ${content.version},
+      // Body: ${content.body}
+      // `
+    )
   } catch (error) {
     core.setFailed(error.message)
   }
