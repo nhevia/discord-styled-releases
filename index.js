@@ -8,7 +8,8 @@ async function getContext () {
 
   const content = {
     body: payload.release.body,
-    version: payload.release.tag_name
+    version: payload.release.tag_name,
+    html_url: payload.release.html_url
   }
 
   core.info(`
@@ -32,7 +33,8 @@ async function run () {
     const embedMsg = {
       color: 3447003,
       title: `Release ${content.version}`,
-      description: content.body
+      description: content.body,
+      url: content.html_url
     }
 
     const body = { embeds: [embedMsg] }
