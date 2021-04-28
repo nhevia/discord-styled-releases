@@ -43,7 +43,7 @@ async function run () {
       headers: { 'Content-Type': 'application/json' }
     })
       .then(res => res.json())
-      .then(data => core.info(data))
+      .then(data => core.info(JSON.stringify(data)))
       .catch(err => core.info(err))
   } catch (error) {
     core.setFailed(error.message)
