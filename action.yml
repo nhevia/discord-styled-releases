@@ -1,5 +1,5 @@
-name: Discord Style realeses with webhooks
-description: Sends automatic releases to Discord, using a webhook.
+name: Discord - Styled Releases/Patch Notes
+description: Send automatic styled releases to Discord.
 inputs:
   webhook_id:
     description: Discord's webhook id. Use GH repo secrets.
@@ -12,4 +12,4 @@ runs:
   main: './dist/index.js'
 branding:
   color: orange
-  icon: align-justify
+  icon: radio
