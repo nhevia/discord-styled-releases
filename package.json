@@ -16,17 +16,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thesourcefun/discord-styled-webhooks.git"
+    "url": "git+https://github.com/nhevia/discord-styled-releases.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/thesourcefun/discord-styled-webhooks/issues"
+    "url": "https://github.com/nhevia/discord-styled-releases/issues"
   },
-  "homepage": "https://github.com/thesourcefun/discord-styled-webhooks#readme",
+  "homepage": "https://github.com/nhevia/discord-styled-releases#readme",
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@actions/github": "^4.0.0",
-    "node-fetch": "^2.6.1"
+    "@actions/core": "1.2.6",
+    "@actions/github": "4.0.0",
+    "node-fetch": "2.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
