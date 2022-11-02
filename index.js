@@ -11,7 +11,8 @@ async function getContext () {
       ? payload.release.body
       : payload.release.body.substring(0, 1500) + ` ([...](${payload.release.html_url}))`,
     version: payload.release.tag_name,
-    html_url: payload.release.html_url
+    html_url: payload.release.html_url,
+    repository_name: payload.repository.full_name
   }
 
   return content
@@ -30,7 +31,7 @@ async function run () {
 
     const embedMsg = {
       color: 3447003,
-      title: `Release ${content.version}`,
+      title: `${content.repository_name} | Release ${content.version}`,
       description: content.body,
       url: content.html_url
     }
