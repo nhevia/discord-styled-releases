@@ -2,7 +2,7 @@ const core = require('@actions/core')
 const github = require('@actions/github')
 const fetch = require('node-fetch')
 
-async function getContext () {
+export async function getContext () {
   const context = github.context
   const payload = context.payload
 
@@ -10,9 +10,9 @@ async function getContext () {
     body: payload.release.body.length < 1500
       ? payload.release.body
       : payload.release.body.substring(0, 1500) + ` ([...](${payload.release.html_url}))`,
-    version: payload.release.tag_name,
+    tag_name: payload.release.tag_name,
     html_url: payload.release.html_url,
-    repository_name: payload.repository.full_name
+    full_name: payload.repository.full_name
   }
 
   return content
@@ -31,7 +31,7 @@ async function run () {
 
     const embedMsg = {
       color: 3447003,
-      title: `${content.repository_name} | Release ${content.version}`,
+      title: `${content.full_name} | Release ${content.tag_name}`,
       description: content.body,
       url: content.html_url
     }
