@@ -11,7 +11,7 @@
     "release"
   ],
   "scripts": {
-    "build": "ncc build index.js",
+    "build": "ncc build src/index.js",
     "test": "jest"
   },
   "repository": {
